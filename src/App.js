@@ -38,7 +38,8 @@ const deleteTask = (id) =>{
 }
   return (
     <div className="container">
-      <Header title = "Task List" onAdd = {() => setShowAdd(!showAdd)}/>
+      <Header title = "Task List" onAdd = {() => setShowAdd(!showAdd)} 
+      showAddTask = {showAdd}/>
       <Task tasklist = {tasklist} onDelete = {deleteTask}/>
       {showAdd && <AddTask onAdd = {addTask}/>}
     </div>
